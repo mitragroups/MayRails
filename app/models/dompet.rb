@@ -1,0 +1,2 @@
+class Dompet < ApplicationRecord
+end
