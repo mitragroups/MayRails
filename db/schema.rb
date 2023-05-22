@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_04_090510) do
+ActiveRecord::Schema.define(version: 2023_05_22_084247) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name", limit: 50, default: "Belum ada nama"
@@ -29,6 +29,20 @@ ActiveRecord::Schema.define(version: 2023_05_04_090510) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "author_id"
+  end
+
+  create_table "dompets", force: :cascade do |t|
+    t.integer "balance"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "username"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
