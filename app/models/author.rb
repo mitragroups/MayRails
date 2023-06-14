@@ -8,4 +8,12 @@ class Author < ApplicationRecord
   def self.urut
     order(old: :asc).pluck(:name, :address)
   end
+
+  def self.penuliswanita
+    where(gender: 'Female')
+  end
+
+  def self.abjad
+    order(name: :asc).pluck(:name, :address)
+  end
 end
