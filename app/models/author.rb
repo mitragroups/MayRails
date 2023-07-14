@@ -16,4 +16,8 @@ class Author < ApplicationRecord
   def self.abjad
     order(name: :asc).pluck(:name, :address)
   end
+
+  def self.perempuan
+    where.not(gender: 'Male')
+  end
 end
